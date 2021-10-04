@@ -67,7 +67,15 @@
                     </form>
                 </div>
             </div>
+            <small>
+                <ul>
+                    <li><b>デモ用ユーザアカウント</b></li>
+                    <li>E-Mail Address:koguma@email.com</li>
+                    <li>Password:koguma4444</li>
+                </ul>
+            </small>
         </div>
     </div>
+
 </div>
 @endsection
