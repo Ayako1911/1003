@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\Memo;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -45,5 +46,8 @@ class AppServiceProvider extends ServiceProvider
         $view->with('memos', $memos)->with('tags', $tags);
 
         });
+
+        Schema::defaultStringLength(191);
     }
+    
 }
