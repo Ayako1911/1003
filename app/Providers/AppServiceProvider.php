@@ -27,6 +27,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
+        
         //全てのメソッドが呼ばれる前に先に呼ばれるメソッド
         view()->composer('*', function ($view) {
             
@@ -46,8 +48,6 @@ class AppServiceProvider extends ServiceProvider
         $view->with('memos', $memos)->with('tags', $tags);
 
         });
-
-        Schema::defaultStringLength(191);
     }
     
 }
